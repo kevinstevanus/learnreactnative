@@ -7,6 +7,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { TextInput } from "react-native-gesture-handler";
 
 import ListCatPage from "./Screens/ListCatPage";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 function HomeScreen({ navigation }) {
   return (
@@ -28,6 +29,32 @@ function DetailsScreen() {
     </View>
   );
 }
+function ProfileScreen() {
+  return (
+    <View>
+      <Text>this is cat page</Text>
+    </View>
+  );
+}
+
+function AccountScreen() {
+  return <View />;
+}
+
+function SettingsScreen() {
+  return <View />;
+}
+
+const Tab = createBottomTabNavigator();
+function HomeTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="CatList" component={ProfileScreen} />
+      <Tab.Screen name="Account" component={AccountScreen} />
+    </Tab.Navigator>
+  );
+}
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -35,7 +62,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="CatPage" component={ListCatPage}></Stack.Screen>
+        <Stack.Screen name="CatPage" component={HomeTabs}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

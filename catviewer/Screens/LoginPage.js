@@ -3,8 +3,12 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 
 const CatPage = () => {
   return (
-    <View style={styles.screen}>
-      <Text>this is list cat page</Text>
+    <View>
+      <Text>Username</Text>
+      <TextInput></TextInput>
+
+      <Text>Password</Text>
+      <TextInput></TextInput>
     </View>
   );
 };

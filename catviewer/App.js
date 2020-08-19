@@ -1,7 +1,7 @@
 // In App.js in a new project
 
 import * as React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, TabBarIOS } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { TextInput } from "react-native-gesture-handler";
@@ -30,11 +30,7 @@ function DetailsScreen() {
   );
 }
 function ProfileScreen() {
-  return (
-    <View>
-      <Text>this is cat page</Text>
-    </View>
-  );
+  return <ListCatPage></ListCatPage>;
 }
 
 function AccountScreen() {
@@ -45,12 +41,17 @@ function SettingsScreen() {
   return <View />;
 }
 
+function SignatureScreen() {
+  return <View />;
+}
+
 const Tab = createBottomTabNavigator();
 function HomeTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="CatList" component={ProfileScreen} />
       <Tab.Screen name="Account" component={AccountScreen} />
+      <Tab.Screen name="Signature" component={SignatureScreen}></Tab.Screen>
     </Tab.Navigator>
   );
 }

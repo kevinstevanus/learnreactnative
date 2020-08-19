@@ -1,14 +1,10 @@
 import * as React from "react";
 import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 
-const CatPage = () => {
+const CameraPage = () => {
   return (
-    <View>
-      <Text>Username</Text>
-      <TextInput></TextInput>
-
-      <Text>Password</Text>
-      <TextInput></TextInput>
+    <View style={styles.screen}>
+      <Text>Camera page</Text>
     </View>
   );
 };
@@ -21,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CatPage;
+export default CameraPage;

@@ -3,10 +3,18 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 
 const ProfilePage = () => {
   return (
-    <View>
-      <Text>this is profile page</Text>
+    <View style={styles.screen}>
+      <Text>this is for the profile page</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 
 export default ProfilePage;

@@ -1,10 +1,11 @@
 import * as React from "react";
+
 import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 
-const CatPage = () => {
+const SignaturePage = () => {
   return (
     <View style={styles.screen}>
-      <Text>this is list cat page, yesh</Text>
+      <Text>signature page</Text>
     </View>
   );
 };
@@ -16,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CatPage;
+export default SignaturePage;

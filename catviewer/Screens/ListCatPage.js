@@ -11,7 +11,7 @@ const CatPage = () => {
   console.log(getDogImage());
   return (
     <View style={styles.screen}>
-      <View style={styles.test}>
+      <View>
         <Text>test</Text>
         <Image
           source={{

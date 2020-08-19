@@ -4,26 +4,13 @@ import * as React from "react";
 import { View, Text, Button, TabBarIOS } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { TextInput } from "react-native-gesture-handler";
 
+import LoginPage from "./Screens/LoginPage";
 import SignaturePage from "./Screens/SignatureScreen";
 import ListCatPage from "./Screens/ListCatPage";
 import CameraPage from "./Screens/CameraPage";
 import ProfilePage from "./Screens/ProfilePage";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Button
-        title="Login"
-        onPress={() => {
-          navigation.navigate("CatPage");
-        }}
-      ></Button>
-    </View>
-  );
-}
 
 function DetailsScreen() {
   return (
@@ -61,8 +48,8 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: true }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={LoginPage} />
         <Stack.Screen name="CatPage" component={HomeTabs}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

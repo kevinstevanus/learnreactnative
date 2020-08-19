@@ -1,17 +1,14 @@
 import * as React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-const fetchDogs = () => {
-  return fetch("https://reactnative.dev/movies.json")
+
+const getDogImage = () => {
+  return fetch("https://dog.ceo/api/breed/hound/images")
     .then((response) => response.json())
-    .then((json) => {
-      return json.movies;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+    .then((data) => console.log(data.message[1]));
 };
+
 const CatPage = () => {
-  console.log(fetchDogs());
+  console.log(getDogImage());
   return (
     <View style={styles.screen}>
       <View style={styles.test}>
